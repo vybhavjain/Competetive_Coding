@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+// not complete solution 
 
 int main() {
     int i,n,j,k;
