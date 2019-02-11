@@ -1,3 +1,5 @@
+# to check if we string B is a substring of A , and if not is it possible by deletion of certain characters from A, if yes print how many deletions
+
 n=int(input())
 #print(n)
 #work = []
