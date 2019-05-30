@@ -1,0 +1,35 @@
+n,k = input().split(" ")
+n = int(n)
+k = int(k)
+s = input().split(" ")
+for i in range(n):
+    s[i] = int(s[i])
+    
+maxvals = 0
+maxvals1 = 0
+t = []
+for i in range(n):
+    t.append(s[i])
+
+s.sort()
+
+middle = 0
+middle1 = 0
+
+if n%2!=0:
+    middle = (n+1)/2
+    middle = int(middle) -1
+    for i in range(n):
+        maxvals+=abs(s[i]-s[middle])
+    print(t.index(s[middle])+1,maxvals-k)
+else:
+    middle=n/2
+    middle = int(middle)
+    middle1 = middle - 1
+    for i in range(n):
+        maxvals  =maxvals  +abs(s[i]-s[middle])
+        maxvals1 =maxvals1 +abs(s[i]-s[middle1])
+    if maxvals>maxvals1:
+        print(t.index(s[middle])+1,maxvals-k)
+    else:
+        print(t.index(s[middle1])+1,maxvals1-k)
