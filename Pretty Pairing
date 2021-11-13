@@ -1,0 +1,24 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+         Scanner in = new Scanner(System.in);
+         String s = in.next();
+         s = s.replaceAll("\\s+","");
+         int len = s.length();
+         int column = (int) Math.ceil(Math.sqrt(len));
+         for( int i = 0; i < column; i++ )
+         {
+             for( int j = i; j < len; j += column )
+             {
+                 System.out.print(s.charAt(j));
+             }
+             System.out.print(" ");
+         }
+    }
+}
